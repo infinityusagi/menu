@@ -6,7 +6,7 @@
    =================================================== */
 
 // ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE ──────────────────────
-var SHEETS_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxgJms_H5t75igbZdwMyckTsFY0nkbgpug5AvJc9gNKQozXnbWbx31UfgacpwIzUDpXhg/exec';
 // ─────────────────────────────────────────────────────────────────────────
 
 function initScene7() {
@@ -28,7 +28,6 @@ function saveToSheets() {
     activity: AppState.cafe  ? AppState.cafe.name  : '(not selected)'
   });
 
-  // GET request avoids all CORS/redirect issues with Google Apps Script
   fetch(SHEETS_URL + '?' + params.toString(), {
     method: 'GET',
     mode:   'no-cors'

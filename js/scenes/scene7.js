@@ -17,7 +17,7 @@ function initScene7() {
 function saveToSheets() {
   if (!SHEETS_URL || SHEETS_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL') return;
 
-  var data = {
+  var params = new URLSearchParams({
     timestamp:  new Date().toLocaleString('en-US'),
     date:       AppState.selectedDate ? AppState.selectedDate.display : '(not selected)',
     appetizer1: AppState.appetizers[0]
@@ -26,13 +26,12 @@ function saveToSheets() {
       ? AppState.appetizers[1].name + (AppState.appetizers[1].superLiked ? ' ⭐' : '') : '',
     movie:    AppState.movie ? AppState.movie.title : '(not selected)',
     activity: AppState.cafe  ? AppState.cafe.name  : '(not selected)'
-  };
+  });
 
-  fetch(SHEETS_URL, {
-    method:  'POST',
-    mode:    'no-cors',
-    headers: { 'Content-Type': 'text/plain' },
-    body:    JSON.stringify(data)
+  // GET request avoids all CORS/redirect issues with Google Apps Script
+  fetch(SHEETS_URL + '?' + params.toString(), {
+    method: 'GET',
+    mode:   'no-cors'
   }).catch(function(err) {
     console.warn('[scene7] Sheets save failed (non-critical):', err);
   });

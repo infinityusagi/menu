@@ -56,11 +56,18 @@ function makeAppCard(item) {
         '<div style="font-size:1.25rem;font-weight:700;color:#1f0a16;text-align:center">' + item.name + '</div>' +
         '<div style="font-size:0.82rem;color:#6b2a3a;text-align:center;font-style:italic">' + item.desc + '</div>' +
       '</div>' +
-      '<div class="overlay-like"><span class="overlay-label">LIKE \u{1F49A}</span></div>' +
+      '<div class="overlay-like"><span class="overlay-label">LIKE 💚</span></div>' +
       '<div class="overlay-nope"><span class="overlay-label">PASS ✕</span></div>' +
       '<div class="overlay-super"><span class="overlay-label">SUPER LIKE ⭐</span></div>' +
-      '<div style="padding:10px;background:rgba(255,255,255,0.85);text-align:center;font-size:0.68rem;color:#9f1239;font-family:sans-serif">' +
-        '← Pass · Like → · ↑ Super Like' +
+      '<div style="display:flex;justify-content:space-around;align-items:center;padding:10px 18px;background:rgba(255,255,255,0.95);border-top:1px solid rgba(253,164,175,0.3)">' +
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:3px">' +
+          '<div style="font-size:1.3rem">👈</div>' +
+          '<span style="font-size:0.6rem;font-weight:700;color:#ef4444;font-family:sans-serif;letter-spacing:1px">PASS</span>' +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:3px">' +
+          '<div style="font-size:1.3rem">👉</div>' +
+          '<span style="font-size:0.6rem;font-weight:700;color:#22c55e;font-family:sans-serif;letter-spacing:1px">LIKE</span>' +
+        '</div>' +
       '</div>' +
     '</div>';
   return card;

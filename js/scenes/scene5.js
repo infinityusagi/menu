@@ -39,16 +39,28 @@ function makeMovieCard(item) {
   card.className  = 'swipe-card';
   card.dataset.id = item.id;
   card.innerHTML =
-    '<div style="position:relative;width:100%;height:100%;background:#111;border-radius:inherit;overflow:hidden">' +
-      '<img src="' + item.posterUrl + '" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.background=\'linear-gradient(145deg,#1e1b4b,#4c1d95)\'"/>' +
-      '<div style="position:absolute;bottom:0;left:0;right:0;padding:32px 18px 14px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0) 100%)">' +
-        '<div style="display:inline-block;background:rgba(255,255,255,0.18);color:#fef9c3;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 10px;border-radius:20px;font-family:sans-serif;margin-bottom:6px">' + item.genre + '</div>' +
-        '<div style="font-size:1.1rem;font-weight:700;color:#fff;line-height:1.3;margin-bottom:4px">' + item.title + '</div>' +
-        '<div style="font-size:0.82rem;color:rgba(255,255,255,0.7);font-family:sans-serif">🎬 CGV · ' + item.date + '</div>' +
+    '<div style="display:flex;flex-direction:column;width:100%;height:100%;background:#111;border-radius:inherit;overflow:hidden">' +
+      '<div style="flex:1;position:relative;overflow:hidden">' +
+        '<img src="' + item.posterUrl + '" draggable="false" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.background=\'linear-gradient(145deg,#1e1b4b,#4c1d95)\'"/>' +
+        '<div style="position:absolute;bottom:0;left:0;right:0;padding:32px 18px 14px;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0) 100%)">' +
+          '<div style="display:inline-block;background:rgba(255,255,255,0.18);color:#fef9c3;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 10px;border-radius:20px;font-family:sans-serif;margin-bottom:6px">' + item.genre + '</div>' +
+          '<div style="font-size:1.1rem;font-weight:700;color:#fff;line-height:1.3;margin-bottom:4px">' + item.title + '</div>' +
+          '<div style="font-size:0.82rem;color:rgba(255,255,255,0.7);font-family:sans-serif">🎬 CGV · ' + item.date + '</div>' +
+        '</div>' +
+        '<div class="overlay-like"><span class="overlay-label">WATCH 🎬</span></div>' +
+        '<div class="overlay-nope"><span class="overlay-label">PASS ✕</span></div>' +
+        '<div class="overlay-super"><span class="overlay-label">MUST WATCH ⭐</span></div>' +
       '</div>' +
-      '<div class="overlay-like"><span class="overlay-label">WATCH 🎬</span></div>' +
-      '<div class="overlay-nope"><span class="overlay-label">PASS ✕</span></div>' +
-      '<div class="overlay-super"><span class="overlay-label">MUST WATCH ⭐</span></div>' +
+      '<div style="flex:0 0 auto;display:flex;justify-content:space-around;align-items:center;padding:8px 18px;background:rgba(0,0,0,0.82);border-top:1px solid rgba(255,255,255,0.1)">' +
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:2px">' +
+          '<div style="font-size:1.3rem">👈</div>' +
+          '<span style="font-size:0.6rem;font-weight:700;color:#fca5a5;font-family:sans-serif;letter-spacing:1px">PASS</span>' +
+        '</div>' +
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:2px">' +
+          '<div style="font-size:1.3rem">👉</div>' +
+          '<span style="font-size:0.6rem;font-weight:700;color:#86efac;font-family:sans-serif;letter-spacing:1px">WATCH</span>' +
+        '</div>' +
+      '</div>' +
     '</div>';
   return card;
 }

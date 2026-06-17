@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Match a Date 💖</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+<!-- ══════════════ BACKGROUND ══════════════ -->
+<div id="bg-layer"></div>
+
+<!-- ══════════════ PROGRESS DOTS ══════════════ -->
+<div class="progress-dots">
+  <div class="progress-dot"></div>
+  <div class="progress-dot"></div>
+  <div class="progress-dot"></div>
+  <div class="progress-dot"></div>
+  <div class="progress-dot"></div>
+  <div class="progress-dot"></div>
+  <div class="progress-dot"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 1 – THE MATCH
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-1">
+  <div class="glass-card w-full mx-4 p-8 flex flex-col items-center gap-6" style="max-width:360px">
+
+    <!-- Mini top badge -->
+    <div style="display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#f43f5e,#f97316,#facc15);border-radius:50px;padding:5px 16px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span style="color:#fff;font-size:0.65rem;font-weight:700;letter-spacing:2px;font-family:sans-serif;text-transform:uppercase">Dating App</span>
+    </div>
+
+    <!-- Title -->
+    <div style="text-align:center">
+      <h1 style="font-size:2.2rem;font-weight:900;line-height:1.1;background:linear-gradient(135deg,#f43f5e,#f97316,#facc15);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:Georgia,serif">
+        Match a Date
+      </h1>
+      <p style="color:#9f1239;font-size:0.88rem;margin-top:8px;font-style:italic">
+        Let's plan something sweet together 💖
+      </p>
+    </div>
+
+    <!-- App icon centered -->
+    <div style="display:flex;align-items:center;justify-content:center;margin:12px 0">
+      <button id="s1-icon" class="app-pulse" style="
+        width:96px;height:96px;border-radius:24px;border:none;cursor:pointer;
+        background:linear-gradient(145deg,#f43f5e,#f97316);
+        display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;
+        box-shadow:0 8px 28px rgba(244,63,94,0.45);
+      " aria-label="Start">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="white">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span style="color:rgba(255,255,255,0.9);font-size:0.52rem;font-weight:700;letter-spacing:1px;font-family:sans-serif">TAP!</span>
+      </button>
+    </div>
+
+    <p style="color:#be123c;font-size:0.75rem;text-align:center;opacity:0.65;font-family:sans-serif">
+      Tap the heart to begin ✨
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 2 – THE INVITATION
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-2">
+  <div class="glass-card w-full mx-4 p-8 flex flex-col items-center gap-5" style="max-width:360px">
+    <h2 style="font-size:1.3rem;font-weight:700;color:#9f1239;text-align:center;font-family:Georgia,serif">
+      A letter just for you 💌
+    </h2>
+
+    <!-- Envelope -->
+    <div id="s2-env-wrap" style="cursor:pointer;position:relative;width:210px;height:155px;perspective:700px;user-select:none;-webkit-tap-highlight-color:transparent;flex-shrink:0">
+      <!-- Body -->
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,#fce7f3,#fff5f5);border-radius:8px;border:2px solid #fda4af;box-shadow:0 6px 20px rgba(244,63,94,0.12);overflow:hidden">
+        <svg style="position:absolute;bottom:0;left:0;width:100%;height:60%" viewBox="0 0 210 93" preserveAspectRatio="none">
+          <path d="M0 93 L105 28 L210 93Z" fill="rgba(253,164,175,0.18)" stroke="#fda4af" stroke-width="1"/>
+        </svg>
+        <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#e11d48,#be123c);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(190,18,60,0.35);font-size:0.95rem">💖</div>
+      </div>
+      <!-- Flap -->
+      <div id="s2-flap" style="position:absolute;top:-1px;left:-1px;right:-1px;height:52%;background:linear-gradient(170deg,#fce7f3,#fda4af);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;z-index:2;border-radius:8px 8px 0 0;border:2px solid #fda4af;border-bottom:none"></div>
+      <p style="position:absolute;top:54%;left:50%;transform:translateX(-50%);color:#be123c;font-size:0.68rem;font-family:sans-serif;opacity:0.6;white-space:nowrap">Tap to open 💌</p>
+    </div>
+
+    <!-- Letter -->
+    <div id="s2-letter" style="display:none;background:rgba(255,255,255,0.96);border-radius:12px;padding:18px 22px;border:1px solid #fecdd3;max-width:280px;text-align:center;box-shadow:0 4px 16px rgba(244,63,94,0.07)">
+      <p style="color:#9f1239;font-size:0.92rem;line-height:1.65;font-style:italic;font-family:Georgia,serif">
+        Hey pretty, we have been talking for a while, do you wanna hang out with me on a date? It is my pleasure to see you soon 💖
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div id="s2-btns" style="display:none;flex-direction:column;align-items:center;gap:10px;width:100%">
+      <button id="s2-accept" class="btn-primary" style="width:100%;max-width:240px">
+        💖 Yes, let's go!
+      </button>
+      <button id="s2-refuse" class="btn-secondary refuse-btn">
+        No thanks 🙅‍♀️
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 3 – PICK A DATE
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-3">
+  <div class="glass-card w-full mx-4 p-5 flex flex-col gap-4" style="max-width:360px">
+    <div style="text-align:center">
+      <h2 style="font-size:1.3rem;font-weight:700;color:#9f1239;font-family:Georgia,serif">📅 Pick a Date</h2>
+      <p style="font-size:0.78rem;color:#be123c;opacity:0.7;margin-top:2px;font-family:sans-serif">Choose the day we'll meet 🌸</p>
+    </div>
+
+    <!-- Month nav -->
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <button id="s3-prev" style="width:34px;height:34px;border-radius:50%;border:1.5px solid #fda4af;background:rgba(255,255,255,0.85);color:#e11d48;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">‹</button>
+      <h3 id="s3-month-title" style="font-size:0.95rem;font-weight:700;color:#9f1239;font-family:sans-serif"></h3>
+      <button id="s3-next" style="width:34px;height:34px;border-radius:50%;border:1.5px solid #fda4af;background:rgba(255,255,255,0.85);color:#e11d48;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">›</button>
+    </div>
+
+    <!-- Calendar grid -->
+    <div class="calendar-wrap" style="min-height:210px">
+      <div id="s3-grid"></div>
+    </div>
+
+    <!-- Next arrow -->
+    <div id="s3-next-arrow" style="display:none;opacity:0;flex-direction:column;align-items:center;gap:6px;cursor:pointer;padding-top:2px">
+      <p style="color:#be123c;font-size:0.8rem;font-family:sans-serif">Perfect! Next step →</p>
+      <div class="arrow-bounce" style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#f43f5e,#f97316);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(244,63,94,0.3)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 16l-6-6h12z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 4 – APPETIZER SWIPE
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-4">
+  <div class="flex flex-col items-center gap-4 w-full px-4" style="max-width:400px">
+    <div style="text-align:center">
+      <div class="course-title">Entrée</div>
+      <p class="course-subtitle">Pick two starters for tonight 🥗</p>
+      <p id="s4-counter" style="font-size:0.75rem;color:#be123c;margin-top:4px;font-family:sans-serif;opacity:0.8">
+        Selected: 0 / 2
+      </p>
+    </div>
+
+    <div class="swipe-stack" id="s4-stack"></div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <button id="s4-nope" style="width:50px;height:50px;border-radius:50%;border:2.5px solid #ef4444;background:#fff;color:#ef4444;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(239,68,68,0.18);display:flex;align-items:center;justify-content:center">✕</button>
+      <button id="s4-super" style="width:42px;height:42px;border-radius:50%;border:2px solid #3b82f6;background:#fff;color:#3b82f6;font-size:1rem;cursor:pointer;box-shadow:0 4px 10px rgba(59,130,246,0.18);display:flex;align-items:center;justify-content:center">⭐</button>
+      <button id="s4-like" style="width:50px;height:50px;border-radius:50%;border:2.5px solid #22c55e;background:#fff;color:#22c55e;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(34,197,94,0.18);display:flex;align-items:center;justify-content:center">❤</button>
+    </div>
+
+    <p style="font-size:0.68rem;color:#9f1239;opacity:0.5;font-family:sans-serif;text-align:center">
+      Pick up to 2 · ⭐ Super Like
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 5 – MOVIE SWIPE
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-5">
+  <div class="flex flex-col items-center gap-4 w-full px-4" style="max-width:400px">
+    <div style="text-align:center">
+      <div class="course-title">Main Course</div>
+      <p class="course-subtitle">Pick a movie at CGV 🎬</p>
+    </div>
+
+    <div class="swipe-stack" id="s5-stack"></div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <button id="s5-nope"  style="width:50px;height:50px;border-radius:50%;border:2.5px solid #ef4444;background:#fff;color:#ef4444;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(239,68,68,0.18);display:flex;align-items:center;justify-content:center">✕</button>
+      <button id="s5-super" style="width:42px;height:42px;border-radius:50%;border:2px solid #3b82f6;background:#fff;color:#3b82f6;font-size:1rem;cursor:pointer;box-shadow:0 4px 10px rgba(59,130,246,0.18);display:flex;align-items:center;justify-content:center">⭐</button>
+      <button id="s5-like"  style="width:50px;height:50px;border-radius:50%;border:2.5px solid #22c55e;background:#fff;color:#22c55e;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(34,197,94,0.18);display:flex;align-items:center;justify-content:center">🎬</button>
+    </div>
+
+    <p style="font-size:0.68rem;color:#9f1239;opacity:0.5;font-family:sans-serif">
+      Now showing &amp; coming soon at CGV
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 6 – DESSERT ACTIVITY SWIPE
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-6">
+  <div class="flex flex-col items-center gap-4 w-full px-4" style="max-width:400px">
+    <div style="text-align:center">
+      <div class="course-title">Dessert</div>
+      <p class="course-subtitle">How shall we end the night? 🌙</p>
+    </div>
+
+    <div class="swipe-stack" id="s6-stack"></div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <button id="s6-nope"  style="width:50px;height:50px;border-radius:50%;border:2.5px solid #ef4444;background:#fff;color:#ef4444;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(239,68,68,0.18);display:flex;align-items:center;justify-content:center">✕</button>
+      <button id="s6-super" style="width:42px;height:42px;border-radius:50%;border:2px solid #3b82f6;background:#fff;color:#3b82f6;font-size:1rem;cursor:pointer;box-shadow:0 4px 10px rgba(59,130,246,0.18);display:flex;align-items:center;justify-content:center">⭐</button>
+      <button id="s6-like"  style="width:50px;height:50px;border-radius:50%;border:2.5px solid #f43f5e;background:#fff;color:#f43f5e;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(244,63,94,0.18);display:flex;align-items:center;justify-content:center">💕</button>
+    </div>
+
+    <p style="font-size:0.68rem;color:#9f1239;opacity:0.5;font-family:sans-serif">
+      The perfect way to end a great date
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SCENE 7 – THE SET MENU
+══════════════════════════════════════════════════ -->
+<section class="scene" id="scene-7">
+  <div style="width:100%;max-width:360px;padding:0 16px 64px">
+    <div class="menu-book" style="padding:22px 20px" id="s7-menu">
+      <!-- Rendered dynamically by scene7.js -->
+    </div>
+    <p style="text-align:center;font-size:0.68rem;color:#9f1239;opacity:0.45;margin-top:10px;font-family:sans-serif">
+      Your choices have been saved 🥰
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ SCRIPTS (load order matters) ══════════════ -->
+<script src="js/app.js"></script>
+<script src="js/utils/swipe.js"></script>
+<script src="js/utils/confetti.js"></script>
+<script src="js/scenes/scene1.js"></script>
+<script src="js/scenes/scene2.js"></script>
+<script src="js/scenes/scene3.js"></script>
+<script src="js/scenes/scene4.js"></script>
+<script src="js/scenes/scene5.js"></script>
+<script src="js/scenes/scene6.js"></script>
+<script src="js/scenes/scene7.js"></script>
+
+</body>
+</html>
